@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {v4 as uuid } from "uuid";
 import { useDispatch } from "react-redux";
-import { addTodo } from "../../redux/Action";
+import { addTodo } from "../../redux/Todo/action";
 
 
 export const TodoInput=()=>{

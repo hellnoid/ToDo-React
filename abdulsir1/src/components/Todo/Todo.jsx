@@ -4,7 +4,7 @@ import { TodoItem } from './TodoItem';
 import { useSelector } from 'react-redux';
 
 export function Todo() {
-  const todos=useSelector((state)=> state.todos)
+  const todos=useSelector((state)=> state.todo.todo)
   return (
     <div>
         <TodoInput/>

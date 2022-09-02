@@ -1,4 +1,13 @@
-import { legacy_createStore as createStore } from "redux";
-import { reducer } from "./reducer";
+import { combineReducers, legacy_createStore as createStore } from "redux";
+import { counterReducer } from "./Counter/reducer";
+import { todoReducer } from "./Todo/reducer";
 
-export const store = createStore(reducer);
+const rootReducer = combineReducers({
+  count: counterReducer,
+  todo: todoReducer,
+});
+
+export const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
